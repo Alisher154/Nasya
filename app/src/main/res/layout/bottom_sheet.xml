@@ -30,7 +30,7 @@
         android:layout_weight="1"
         android:drawablePadding="@dimen/margin_middle"
         android:padding="@dimen/margin_standard"
-        android:text="@string/add_product_ru"
+        android:text="@string/add_product"
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_standard"
         app:drawableStartCompat="@drawable/ic_baseline_add_shopping_cart_24"

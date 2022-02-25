@@ -1,32 +1,32 @@
 <resources>
     <string name="app_name">Nasya</string>
-    <string name="add_client">Добавление клиента</string>
-    <string name="name">Имя</string>
-    <string name="surname">Фамилия</string>
-    <string name="patronymic">Отчество</string>
-    <string name="passport_number">Номер паспорта</string>
+    <string name="add_client">Add new client</string>
+    <string name="name">First name</string>
+    <string name="surname">Last name</string>
+    <string name="patronymic">Middle name</string>
+    <string name="passport_number">Passport ID</string>
     <string name="phone1">Мобилный</string>
     <string name="phone2">Телефон</string>
-    <string name="sign_up">Регистрация</string>
-    <string name="product">Продукть</string>
-    <string name="login">Логин</string>
-    <string name="password_ru">Пароль</string>
+    <string name="sign_up">Registration</string>
+    <string name="product">Product</string>
+    <string name="login">Login</string>
+    <string name="password_ru">Password</string>
     <string name="powered_by_texnopos">Powered by <a href="https://t.me/texnopos"><u>TexnoPOS</u></a></string>
     <string name="btn_login">Вход</string>
     <string name="required">Обязательно</string>
     <string name="todo">TODO</string>
-    <string name="clients">Клиенты</string>
+    <string name="clients">Clients</string>
     <string name="current_debt_ru">Текущии долг</string>
     <string name="term">Срок</string>
     <string name="add_payment">Добавит оплату</string>
     <string name="confirm_payment">Подтвердить оплату</string>
-    <string name="password">Пароль</string>
+    <string name="password">Password</string>
 
-    <string name="order_id">Номер заказа: %1$d</string>
+    <string name="order_id">Order ID: %1$d</string>
     <string name="request_pay">Погасить весь имеющийся долг. Расчетная сумма %1$sов"</string>
     <string name="success">Успех</string>
     <string name="pay_it_all">Заплатить все</string>
-    <string name="toolbar_title">Клиенты</string>
+    <string name="toolbar_title">Clients</string>
     <string name="logout">Logout</string>
     <string name="content_description_logout">logout</string>
     <string name="btn_logout">выйти</string>
@@ -36,7 +36,7 @@
 
     <string name="the_selected_file_is_empty">The selected file is empty. Please select file of user contacts.</string>
     <string name="sort">Sort</string>
-    <string name="client_id">Клиент номера: %1$d</string>
+    <string name="client_id">Client ID: %1$d</string>
     <string name="count_product">Число товаров: %1$d</string>
     <string name="count_product2">Число товаров</string>
     <string name="client_phone">+998(97)220–21–56</string>
@@ -44,21 +44,21 @@
     <string name="all_debt">Общий долг:</string>
     <string name="all_debt_value">8 500 000 сум</string>
     <string name="current_debt_value">1 500 000 сум</string>
-    <string name="search_client">Поиск…</string>
-    <string name="client_not_found">Клиент не найден</string>
-    <string name="product_price_text">Цена продукта</string>
-    <string name="first_pay_text">Первая выплата</string>
-    <string name="percent_text">Процентов</string>
-    <string name="month_text">Месяц</string>
+    <string name="search_client">Search…</string>
+    <string name="client_not_found">Client not found</string>
+    <string name="product_price_text">Product price</string>
+    <string name="first_pay_text">First payment</string>
+    <string name="percent_text">Percent</string>
+    <string name="month_text">Month</string>
     <string name="result_amount">На месяц: %1$s</string>
-    <string name="calc_text">Калькулятор</string>
+    <string name="calc_text">Calculator</string>
     <string name="result_general">Общий: %1$s</string>
     <string name="incorrect_amount">Неверная сумма!</string>
     <string name="order_paid">Оплачено: %1$s</string>
     <string name="all_sum">Договорная цена</string>
     <string name="client_name">Алибек Ембергенов</string>
 
-    <string name="select_passport_title">Паспорт</string>
+    <string name="select_passport_title">Passport</string>
     <string name="select_letter_title">Согласие</string>
     <string name="passport_series">KA</string>
     <string name="fromCamera">С камеры</string>
@@ -76,22 +76,22 @@
     <string name="handle_notification_now">We are going to do something with our notification right now!</string>
     <string name="retrieve_token">Retrieve Token</string>
     <string name="FCMPushNotification">FCMPushNotification</string>
-    <string name="add_order">Добавить заказ</string>
-    <string name="product_id">Продукт номер</string>
-    <string name="clientId">Клиент номер</string>
-    <string name="first_pay">Первая оплата</string>
-    <string name="surcharge">Процентов</string>
-    <string name="price">Цена</string>
-    <string name="product_code">Описание</string>
-    <string name="select_product">Выбрать продукт</string>
-    <string name="select_category">Выбрать категория</string>
-    <string name="add_phone">Добавить телефон</string>
-    <string name="fullname">Полное имя</string>
+    <string name="add_order">Add order</string>
+    <string name="product_id">Product ID</string>
+    <string name="clientId">Client ID</string>
+    <string name="first_pay">First payment</string>
+    <string name="surcharge">Percent</string>
+    <string name="price">Price</string>
+    <string name="product_code">Description</string>
+    <string name="select_product">Select product</string>
+    <string name="select_category">Select category</string>
+    <string name="add_phone">Add phone</string>
+    <string name="fullname">Full name</string>
     <string name="ka">KA</string>
-    <string name="all_call_number">Телефоны</string>
+    <string name="all_call_number">Phones</string>
     <string name="phone_number">+998 97 968 08 05</string>
     <string name="add_new_client">New client</string>
-    <string name="add_product_ru">Add product</string>
+    <string name="add_product">Add product</string>
     <string name="statistics">Statics</string>
     <string name="categories">Category</string>
     <string name="settings">Settings</string>
@@ -99,12 +99,5 @@
     <string name="add_new_category">Add category</string>
     <string name="category_name">Category name</string>
 
-    <string-array name="courses">
-        <item>Android</item>
-        <item>Front-End</item>
-        <item>Kotlin</item>
-        <item>Python</item>
-        <item>SMM</item>
-    </string-array>
 
 </resources>

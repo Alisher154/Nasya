@@ -8,6 +8,7 @@ import androidx.room.PrimaryKey
 data class Order(
     @PrimaryKey(autoGenerate = true)
     val id: Int? = null,
+    @ColumnInfo(name = "client_id") val clientId:Int,
     @ColumnInfo(name = "product_id") val productId:Int,
     @ColumnInfo(name = "start_date") val startDate:Int,
     @ColumnInfo(name = "month") val month:Int

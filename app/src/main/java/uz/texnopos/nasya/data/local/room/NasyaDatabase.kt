@@ -2,13 +2,10 @@ package uz.texnopos.nasya.data.local.room
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import uz.texnopos.nasya.data.local.room.entities.Category
-import uz.texnopos.nasya.data.local.room.entities.Client
-import uz.texnopos.nasya.data.local.room.entities.Product
-import uz.texnopos.nasya.data.local.room.entities.Transaction
+import uz.texnopos.nasya.data.local.room.entities.*
 
 @Database(
-    entities = [Client::class, Category::class, Product::class,Transaction::class],
+    entities = [Client::class, Category::class, Product::class,Transaction::class,Order::class],
     version = 1,
     exportSchema = false
 )

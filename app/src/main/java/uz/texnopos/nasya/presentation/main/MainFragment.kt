@@ -33,6 +33,16 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         val dialogBinding =
             BottomSheetBinding.bind(layoutInflater.inflate(R.layout.bottom_sheet, null))
         bottomSheetDialog.setContentView(dialogBinding.root)
+        dialogBinding.apply {
+            tvAddNewClient.onClick {
+                navController.navigate(R.id.action_mainFragment_to_addClientFragment)
+                bottomSheetDialog.dismiss()
+            }
+            tvAddNewProduct.onClick {
+                navController.navigate(R.id.action_mainFragment_to_addProductFragment)
+                bottomSheetDialog.dismiss()
+            }
+        }
 
         setAppBarCornersRadius()
         binding.apply {

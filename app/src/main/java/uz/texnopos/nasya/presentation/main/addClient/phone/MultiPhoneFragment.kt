@@ -1,4 +1,4 @@
-package uz.texnopos.nasya.presentation.main.addclient.phone
+package uz.texnopos.nasya.presentation.main.addClient.phone
 
 import android.os.Bundle
 import android.view.View

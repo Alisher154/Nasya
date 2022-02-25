@@ -5,10 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import kotlinx.coroutines.flow.Flow
-import uz.texnopos.nasya.data.local.room.entities.Category
-import uz.texnopos.nasya.data.local.room.entities.Client
-import uz.texnopos.nasya.data.local.room.entities.Product
-import uz.texnopos.nasya.data.local.room.entities.Transaction
+import uz.texnopos.nasya.data.local.room.entities.*
 
 
 @Dao
@@ -50,4 +47,13 @@ interface NasyaDao {
 
     @Query("select *from transactions where order_id=:orderId")
     fun getTransactionsByOrderId(orderId: Int): Flow<List<Transaction>>
+
+    //Orders
+    @Insert
+    suspend fun addOrder(order: Order)
+
+    @Query("select * from orders where client_id=:clientId")
+    fun getOrdersByClientId(clientId: Int): Flow<List<Order>>
+
+
 }

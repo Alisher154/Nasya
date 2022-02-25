@@ -54,7 +54,7 @@
 
     <fragment
         android:id="@+id/addClientFragment"
-        android:name="uz.texnopos.nasya.presentation.main.addclient.AddClientFragment"
+        android:name="uz.texnopos.nasya.presentation.main.addClient.AddClientFragment"
         android:label="AddClientFragment"
         tools:layout="@layout/fragment_add_client" />
 
@@ -72,7 +72,7 @@
 
     <fragment
         android:id="@+id/multiPhoneFragment"
-        android:name="uz.texnopos.nasya.presentation.main.addclient.phone.MultiPhoneFragment"
+        android:name="uz.texnopos.nasya.presentation.main.addClient.phone.MultiPhoneFragment"
         android:label="MultiPhoneFragment"
         tools:layout="@layout/fragment_multi_phone" />
 

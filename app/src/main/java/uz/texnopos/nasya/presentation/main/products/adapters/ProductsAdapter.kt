@@ -1,6 +1,5 @@
 package uz.texnopos.nasya.presentation.main.products.adapters
 
-import android.annotation.SuppressLint
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import uz.texnopos.nasya.R
@@ -21,12 +20,16 @@ class ProductsAdapter : RecyclerView.Adapter<ProductsAdapter.ProductViewHolder>(
         }
     }
 
-    var models: MutableList<Product> = mutableListOf()
-        @SuppressLint("NotifyDataSetChanged")
-        set(value) {
-            field = value
-            notifyDataSetChanged()
+    private var models: MutableList<Product> = mutableListOf()
+
+    fun setData(models: List<Product>) {
+        notifyItemRangeRemoved(0, this.models.size)
+        this.models.clear()
+        for (i in models.indices) {
+            this.models.add(models[i])
+            notifyItemInserted(i)
         }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         return ProductViewHolder(ItemProductBinding.bind(parent.inflate(R.layout.item_product)))

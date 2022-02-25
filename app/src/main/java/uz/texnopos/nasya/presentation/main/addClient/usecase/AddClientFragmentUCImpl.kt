@@ -1,4 +1,4 @@
-package uz.texnopos.nasya.presentation.main.addclient.usecase
+package uz.texnopos.nasya.presentation.main.addClient.usecase
 
 import uz.texnopos.nasya.data.local.room.entities.Client
 import uz.texnopos.nasya.repository.interfaces.ClientRepository

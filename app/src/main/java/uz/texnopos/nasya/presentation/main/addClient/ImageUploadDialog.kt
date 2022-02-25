@@ -1,4 +1,4 @@
-package uz.texnopos.nasya.presentation.main.addclient
+package uz.texnopos.nasya.presentation.main.addClient
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -12,6 +12,7 @@ import kotlinx.parcelize.Parcelize
 data class Product(
     @PrimaryKey(autoGenerate = true)
     val id: Int? = null,
-    @ColumnInfo(name = "category_id") val categoryId: String,
-    @ColumnInfo(name = "product_name") val productName: String
+    @ColumnInfo(name = "category_id") val categoryId: Int,
+    @ColumnInfo(name = "product_name") val productName: String,
+    @ColumnInfo(name = "product_price") val productPrice: String
 ):Parcelable

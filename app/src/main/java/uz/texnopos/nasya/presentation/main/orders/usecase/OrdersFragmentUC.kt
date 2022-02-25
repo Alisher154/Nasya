@@ -5,4 +5,5 @@ import uz.texnopos.nasya.data.local.room.entities.Client
 
 interface OrdersFragmentUC {
     suspend fun removeClient(clientId:Int)
+
 }

@@ -1,4 +1,4 @@
-package uz.texnopos.nasya.presentation.main.addclient
+package uz.texnopos.nasya.presentation.main.addClient
 
 import android.os.Bundle
 import android.view.View
@@ -9,7 +9,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import uz.texnopos.nasya.R
 import uz.texnopos.nasya.data.local.room.entities.Client
 import uz.texnopos.nasya.databinding.FragmentAddClientBinding
-import uz.texnopos.nasya.presentation.main.addclient.viewmodel.AddClientVMImpl
+import uz.texnopos.nasya.presentation.main.addClient.viewmodel.AddClientVMImpl
 import uz.texnopos.nasya.utils.*
 
 @AndroidEntryPoint
@@ -38,26 +38,6 @@ class AddClientFragment : Fragment(R.layout.fragment_add_client) {
             }
         }
     }
-
-    private fun observe() {
-        viewModel.register.observe(viewLifecycleOwner) {
-            when (it) {
-                State.LoadingState -> {
-                    toast("Loading")
-                }
-                is State.SuccessState -> {
-                    toast(it.data)
-                    requireActivity().onBackPressed()
-                }
-                is State.ErrorState -> {
-                    toast(it.exception.localizedMessage ?: "Something wrong")
-                }
-
-
-            }
-        }
-    }
-
     private fun FragmentAddClientBinding.validate(): Boolean {
         return when {
             etFullName.checkIsEmpty() -> etFullName.showError(getString(R.string.required))
