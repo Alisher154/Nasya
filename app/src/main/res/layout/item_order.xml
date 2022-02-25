@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/margin_small"
+    android:backgroundTint="@color/dark_blue"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_standard"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:text="@string/product"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvOrderId"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="@string/order_id"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/tvProductName"
+            app:layout_constraintStart_toStartOf="@id/tvProductName"
+            />
+
+        <TextView
+            android:id="@+id/tvAllSum"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="@string/all_sum"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/tvOrderId"
+            app:layout_constraintStart_toStartOf="@id/tvOrderId"
+            />
+
+        <TextView
+            android:id="@+id/tvPaidSum"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="@string/order_paid"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/tvAllSum"
+            app:layout_constraintStart_toStartOf="@id/tvAllSum"
+            />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/tvPaidSum"
+            app:layout_constraintStart_toStartOf="@id/tvPaidSum"
+            />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_standard"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/tvAllSum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvAllSum" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgCheck"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_round_circle_red"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
