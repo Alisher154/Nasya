@@ -21,9 +21,9 @@
 
     <fragment
         android:id="@+id/productFragment"
-        android:name="uz.texnopos.nasya.presentation.main.product.ProductFragment"
+        android:name="uz.texnopos.nasya.presentation.main.products.ProductsFragment"
         android:label="ProductFragment"
-        tools:layout="@layout/fragment_product"
+        tools:layout="@layout/fragment_products"
         />
 
     <fragment

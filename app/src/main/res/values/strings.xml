@@ -90,13 +90,14 @@
     <string name="ka">KA</string>
     <string name="all_call_number">Телефоны</string>
     <string name="phone_number">+998 97 968 08 05</string>
-    <string name="add_new_client_ru">New client</string>
+    <string name="add_new_client">New client</string>
     <string name="add_product_ru">Add product</string>
     <string name="statistics">Statics</string>
     <string name="categories">Category</string>
     <string name="settings">Settings</string>
     <string name="product_name">Product Name</string>
-    <string name="add_new_category_ru">Add category</string>
+    <string name="add_new_category">Add category</string>
+    <string name="category_name">Category name</string>
 
     <string-array name="courses">
         <item>Android</item>

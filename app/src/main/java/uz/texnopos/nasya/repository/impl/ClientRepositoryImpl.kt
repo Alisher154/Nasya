@@ -5,10 +5,10 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.withContext
 import uz.texnopos.nasya.data.local.room.NasyaDao
 import uz.texnopos.nasya.data.local.room.entities.Client
-import uz.texnopos.nasya.repository.interfaces.ClientsRepository
+import uz.texnopos.nasya.repository.interfaces.ClientRepository
 import javax.inject.Inject
 
-class ClientsRepositoryImpl @Inject constructor(private val dao: NasyaDao) : ClientsRepository {
+class ClientRepositoryImpl @Inject constructor(private val dao: NasyaDao) : ClientRepository {
 
     override suspend fun clientRegister(client: Client) {
         withContext(IO) { dao.clientRegister(client) }

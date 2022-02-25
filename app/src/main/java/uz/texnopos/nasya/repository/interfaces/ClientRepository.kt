@@ -3,7 +3,7 @@ package uz.texnopos.nasya.repository.interfaces
 import kotlinx.coroutines.flow.Flow
 import uz.texnopos.nasya.data.local.room.entities.Client
 
-interface ClientsRepository {
+interface ClientRepository {
 
     suspend fun clientRegister(client: Client)
 

@@ -1,4 +1,4 @@
-package uz.texnopos.nasya.presentation.main.product.addProduct
+package uz.texnopos.nasya.presentation.main.addProduct
 
 import androidx.fragment.app.Fragment
 import uz.texnopos.nasya.R

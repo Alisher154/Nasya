@@ -49,5 +49,5 @@ interface NasyaDao {
     suspend fun addTransaction(transaction: Transaction)
 
     @Query("select *from transactions where order_id=:orderId")
-    fun getTransactionsById(orderId: Int): Flow<List<Transaction>>
+    fun getTransactionsByOrderId(orderId: Int): Flow<List<Transaction>>
 }

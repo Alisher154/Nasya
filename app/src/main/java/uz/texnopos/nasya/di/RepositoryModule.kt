@@ -4,8 +4,10 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import uz.texnopos.nasya.repository.impl.ClientsRepositoryImpl
-import uz.texnopos.nasya.repository.interfaces.ClientsRepository
+import uz.texnopos.nasya.repository.impl.ClientRepositoryImpl
+import uz.texnopos.nasya.repository.impl.ProductRepositoryImpl
+import uz.texnopos.nasya.repository.interfaces.ClientRepository
+import uz.texnopos.nasya.repository.interfaces.ProductRepository
 import javax.inject.Singleton
 
 
@@ -14,6 +16,9 @@ import javax.inject.Singleton
 interface RepositoryModule {
 
     @[Binds Singleton]
-    fun provideClientsRepository(impl: ClientsRepositoryImpl): ClientsRepository
+    fun provideClientRepository(impl: ClientRepositoryImpl): ClientRepository
+
+    @[Binds Singleton]
+    fun provideProductRepository(impl: ProductRepositoryImpl): ProductRepository
 
 }
