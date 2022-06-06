@@ -3,7 +3,7 @@ package uz.texnopos.nasya.presentation.main.addProduct.usecase
 import kotlinx.coroutines.flow.Flow
 import uz.texnopos.nasya.data.local.room.entities.Category
 import uz.texnopos.nasya.data.local.room.entities.Product
-import uz.texnopos.nasya.repository.interfaces.ProductRepository
+import uz.texnopos.nasya.domain.repository.ProductRepository
 import javax.inject.Inject
 
 class AddProductFragmentUCImpl @Inject constructor(private val repo: ProductRepository) :

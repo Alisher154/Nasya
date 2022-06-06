@@ -1,4 +1,4 @@
-package uz.texnopos.nasya.repository.impl
+package uz.texnopos.nasya.data.repository
 
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.flow.Flow
@@ -6,7 +6,7 @@ import kotlinx.coroutines.withContext
 import uz.texnopos.nasya.data.local.room.NasyaDao
 import uz.texnopos.nasya.data.local.room.entities.Client
 import uz.texnopos.nasya.data.local.room.entities.Order
-import uz.texnopos.nasya.repository.interfaces.ClientRepository
+import uz.texnopos.nasya.domain.repository.ClientRepository
 import javax.inject.Inject
 
 class ClientRepositoryImpl @Inject constructor(private val dao: NasyaDao) : ClientRepository {

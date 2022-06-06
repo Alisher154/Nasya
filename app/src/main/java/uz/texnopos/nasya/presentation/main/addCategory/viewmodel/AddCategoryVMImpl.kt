@@ -16,5 +16,4 @@ class AddCategoryVMImpl @Inject constructor(private val useCase: AddCategoryFrag
             useCase.addCategory(category)
         }
     }
-
 }

@@ -9,6 +9,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import uz.texnopos.nasya.data.local.room.NasyaDao
 import uz.texnopos.nasya.data.local.room.NasyaDatabase
+import uz.texnopos.nasya.data.local.sharedpref.SharedPref
 import javax.inject.Singleton
 
 
@@ -17,8 +18,8 @@ import javax.inject.Singleton
 class LocalModule {
 
     @[Provides Singleton]
-    fun provideSharedPreference(@ApplicationContext context: Context): uz.texnopos.nasya.data.local.sharedpref.SharedPref =
-        uz.texnopos.nasya.data.local.sharedpref.SharedPref(context)
+    fun provideSharedPreference(@ApplicationContext context: Context): SharedPref =
+        SharedPref(context)
 
     @[Provides Singleton]
     fun provideNasyaDatabase(

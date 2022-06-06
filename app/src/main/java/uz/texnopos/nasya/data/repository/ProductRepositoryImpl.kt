@@ -1,4 +1,4 @@
-package uz.texnopos.nasya.repository.impl
+package uz.texnopos.nasya.data.repository
 
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.flow.Flow
@@ -6,7 +6,7 @@ import kotlinx.coroutines.withContext
 import uz.texnopos.nasya.data.local.room.NasyaDao
 import uz.texnopos.nasya.data.local.room.entities.Category
 import uz.texnopos.nasya.data.local.room.entities.Product
-import uz.texnopos.nasya.repository.interfaces.ProductRepository
+import uz.texnopos.nasya.domain.repository.ProductRepository
 import javax.inject.Inject
 
 class ProductRepositoryImpl @Inject constructor(private val dao: NasyaDao) : ProductRepository {

@@ -1,4 +1,4 @@
-package uz.texnopos.installment.core
+package uz.texnopos.nasya.utils
 
 import android.text.InputFilter
 import android.text.Spanned

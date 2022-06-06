@@ -1,4 +1,4 @@
-package uz.texnopos.nasya.models
+package uz.texnopos.nasya.domain.models
 
 data class Amount(
     var productPrice: Double = 0.0,

@@ -15,8 +15,8 @@ import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import uz.texnopos.nasya.R
 import uz.texnopos.nasya.databinding.CalcDialogBinding
-import uz.texnopos.nasya.models.Amount
-import uz.texnopos.installment.core.MinMaxFilter
+import uz.texnopos.nasya.domain.models.Amount
+import uz.texnopos.nasya.utils.MinMaxFilter
 import uz.texnopos.nasya.utils.changeFormat
 import uz.texnopos.nasya.utils.checkIsEmpty
 import uz.texnopos.nasya.utils.mask.MaskWatcherPrice

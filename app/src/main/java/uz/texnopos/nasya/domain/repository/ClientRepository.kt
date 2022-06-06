@@ -1,4 +1,4 @@
-package uz.texnopos.nasya.repository.interfaces
+package uz.texnopos.nasya.domain.repository
 
 import kotlinx.coroutines.flow.Flow
 import uz.texnopos.nasya.data.local.room.entities.Client

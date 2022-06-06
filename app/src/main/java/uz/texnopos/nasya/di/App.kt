@@ -1,4 +1,4 @@
-package uz.texnopos.nasya.presentation
+package uz.texnopos.nasya.di
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

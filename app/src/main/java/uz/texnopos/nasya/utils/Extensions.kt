@@ -33,6 +33,12 @@ fun Fragment.toast(text: String, duration: Int = Toast.LENGTH_SHORT) {
     }
 }
 
+fun Fragment.toast(resId: Int, duration: Int = Toast.LENGTH_SHORT) {
+    if (context != null) {
+        context!!.toast(getString(resId), duration)
+    }
+}
+
 inline fun <T : View> T.onClick(crossinline func: T.() -> Unit) = setOnClickListener { func() }
 
 inline fun <T : Toolbar> T.navOnClick(crossinline func: T.() -> Unit) =
@@ -95,14 +101,6 @@ fun Fragment.setStatusBarColor(colorId: Int) {
 
 fun Context.getConnectivityManager() =
     getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-
-fun Fragment.showProgress() {
-    (requireActivity() as AppBaseActivity).showProgress(true)
-}
-
-fun Fragment.hideProgress() {
-    (requireActivity() as AppBaseActivity).showProgress(false)
-}
 
 fun String.contains2(s: String): Boolean {
     return this.lowercase().contains(s.lowercase())
