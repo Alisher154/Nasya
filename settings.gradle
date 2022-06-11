@@ -15,3 +15,16 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Nasya"
 include ':app'
+
+include ':feature:auth'
+include ':feature:auth:datasource-api'
+include ':feature:auth:datasource-impl'
+include ':feature:auth:model'
+include ':feature:auth:usecase'
+
+
+
+include ':feature:home'
+include ':ui:auth'
+include ':ui:home'
+include ':ui:clients'

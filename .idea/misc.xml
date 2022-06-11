@@ -47,6 +47,10 @@
         <entry key="..\:/AndroidStudioProjects/Nasya/app/src/main/res/menu/menu_toolbar_orders.xml" value="0.19895833333333332" />
         <entry key="..\:/AndroidStudioProjects/Nasya/app/src/main/res/menu/settings_app_bar.xml" value="0.19895833333333332" />
         <entry key="..\:/AndroidStudioProjects/Nasya/app/src/main/res/menu/top_app_bar.xml" value="0.19895833333333332" />
+        <entry key="..\:/Users/alish/StudioProjects/Nasya/feature/auth/src/main/res/layout/fragment_auth.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/alish/StudioProjects/Nasya/feature/home/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/alish/StudioProjects/Nasya/ui/auth/src/main/res/layout/fragment_auth.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/alish/StudioProjects/Nasya/ui/home/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
