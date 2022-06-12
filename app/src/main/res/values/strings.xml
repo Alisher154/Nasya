@@ -105,7 +105,8 @@
     <string name="error_password_not_contains_letter">Please contain at least a letter in your password</string>
     <string name="error_password_not_contains_digit">Please contain at least a digit in your password</string>
     <string name="successful_registered">Successfully registered</string>
-
+    <string name="alisher_mail_ru">alisher@mail.ru</string>
+    <string name="my_password">alisher12345</string>
 
 
 </resources>

@@ -12,15 +12,22 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/auth" />
             <option value="$PROJECT_DIR$/feature/auth/datasource-api" />
             <option value="$PROJECT_DIR$/feature/auth/datasource-impl" />
             <option value="$PROJECT_DIR$/feature/auth/model" />
             <option value="$PROJECT_DIR$/feature/auth/usecase" />
+            <option value="$PROJECT_DIR$/feature/clients" />
+            <option value="$PROJECT_DIR$/feature/clients/datasource-api" />
+            <option value="$PROJECT_DIR$/feature/clients/datasource-impl" />
+            <option value="$PROJECT_DIR$/feature/clients/model" />
+            <option value="$PROJECT_DIR$/feature/clients/usecase" />
             <option value="$PROJECT_DIR$/feature/home" />
             <option value="$PROJECT_DIR$/ui" />
             <option value="$PROJECT_DIR$/ui/auth" />
+            <option value="$PROJECT_DIR$/ui/clients" />
             <option value="$PROJECT_DIR$/ui/home" />
           </set>
         </option>

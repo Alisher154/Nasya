@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_blue"
+    tools:context=".presentation.main.clients.ClientsFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/background_blue"
+        >
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/background_blue"
+            app:menu="@menu/top_app_bar"
+            app:title="@string/toolbar_title"
+            app:titleMarginStart="@dimen/margin_large"
+            app:titleTextColor="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topAppBar"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="@dimen/margin_large"
+            android:layout_marginTop="12dp"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/mtrl_textinput_default_box_stroke_color"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/white"
+            app:endIconTintMode="multiply"
+            app:hintEnabled="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:startIconDrawable="@drawable/ic_baseline_person_search_24"
+            app:startIconTint="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:hint="@string/search_client"
+                android:maxLines="1"
+                android:minLines="1"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="#96989F"
+                android:textSize="18sp"
+                app:textInputLayoutFocusedRectEnabled="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/clientNotFound"
+            android:text="@string/client_not_found"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_gravity="bottom"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_collapseMode="pin"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/swipeRefresh"
+            app:layout_constraintEnd_toEndOf="@id/swipeRefresh"
+            app:layout_constraintTop_toTopOf="@id/swipeRefresh"
+            app:layout_constraintBottom_toBottomOf="@id/swipeRefresh"
+            />
+
+        <TextView
+            android:id="@+id/tvNotFound"
+            android:text="@string/client_not_found2"
+            android:layout_width="wrap_content"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            android:fontFamily="serif-monospace"
+            app:layout_constraintStart_toStartOf="@id/swipeRefresh"
+            app:layout_constraintEnd_toEndOf="@id/swipeRefresh"
+            app:layout_constraintTop_toTopOf="@id/swipeRefresh"
+            app:layout_constraintBottom_toBottomOf="@id/swipeRefresh"
+            android:layout_height="wrap_content"/>
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_search"
+           >
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_clients"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                tools:listitem="@layout/item_client"
+                android:paddingHorizontal="@dimen/margin_standard_large"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/background_image" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--android:id="@+id/floating_button"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_marginEnd="@dimen/margin_standard_large"-->
+<!--android:layout_marginBottom="@dimen/margin_standard_large"-->
+<!--android:alpha="1"-->
+<!--android:backgroundTintMode="screen"-->
+<!--app:backgroundTint="@color/black"-->
+<!--app:layout_constraintBottom_toBottomOf="parent"-->
+<!--app:layout_constraintEnd_toEndOf="parent"-->
+<!--app:srcCompat="@drawable/ic_add"-->
+<!--app:tint="@color/white"-->
+<!--android:contentDescription="@string/app_name" />-->
+
+<!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--android:id="@+id/floating_calc_button"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_marginBottom="@dimen/margin_standard_large"-->
+<!--android:backgroundTintMode="screen"-->
+<!--android:clickable="true"-->
+<!--android:focusable="true"-->
+<!--android:visibility="invisible"-->
+<!--app:backgroundTint="@color/black"-->
+<!--app:fabSize="mini"-->
+<!--app:layout_constraintBottom_toTopOf="@id/floating_button"-->
+<!--app:layout_constraintEnd_toEndOf="@id/floating_button"-->
+<!--app:layout_constraintStart_toStartOf="@id/floating_button"-->
+<!--app:srcCompat="@drawable/ic_calculate"-->
+<!--android:contentDescription="@string/calc_text"-->
+<!--app:tint="@color/white" />-->
+
+<!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--android:id="@+id/floating_add_button"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_marginBottom="8dp"-->
+<!--android:backgroundTintMode="screen"-->
+<!--android:clickable="true"-->
+<!--android:focusable="true"-->
+<!--android:visibility="invisible"-->
+<!--app:backgroundTint="@color/black"-->
+<!--app:fabSize="mini"-->
+<!--app:layout_constraintBottom_toTopOf="@id/floating_calc_button"-->
+<!--app:layout_constraintEnd_toEndOf="@id/floating_button"-->
+<!--app:layout_constraintStart_toStartOf="@id/floating_button"-->
+<!--app:srcCompat="@drawable/ic_person_add"-->
+<!--android:contentDescription="@string/add_client"-->
+<!--app:tint="@color/white" />-->

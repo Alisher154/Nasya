@@ -40,6 +40,8 @@ android {
 
 dependencies {
 
+    implementation(project(':ui:home'))
+
 
     // Kotlin library dependency
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10"
