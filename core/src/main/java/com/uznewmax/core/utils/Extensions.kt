@@ -156,28 +156,6 @@ fun Activity.askPermission(permissions: Array<out String>, @IntRange(from = 0) r
 fun Fragment.askPermission(permissions: Array<out String>, @IntRange(from = 0) requestCode: Int) =
     ActivityCompat.requestPermissions(requireActivity(), permissions, requestCode)
 
-fun deleteCache(context: Context) {
-    try {
-        val dir: File = context.cacheDir
-        deleteDir(dir)
-    } catch (e: Exception) {
-    }
-}
-
-fun deleteDir(dir: File?): Boolean {
-    return if (dir != null && dir.isDirectory) {
-        val children = dir.list()
-        for (i in children.indices) {
-            val success = deleteDir(File(dir, children[i]))
-            if (!success) {
-                return false
-            }
-        }
-        dir.delete()
-    } else if (dir != null && dir.isFile) dir.delete() else {
-        false
-    }
-}
 
 fun String.changeDateFormat(): String {
     var s = ""

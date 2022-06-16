@@ -9,11 +9,11 @@ import uz.texnopos.nasya.utils.AndroidMailMatcher
 
 import javax.inject.Singleton
 
-@Module
-@InstallIn(SingletonComponent::class)
-object ApplicationModule {
-
-    @Provides
-    @Singleton
-    fun provideMailMatcher(): MailMatcher = AndroidMailMatcher()
-}
+//@Module
+//@InstallIn(SingletonComponent::class)
+//object ApplicationModule {
+//
+//    @Provides
+//    @Singleton
+//    fun provideMailMatcher(): MailMatcher = AndroidMailMatcher()
+//}

@@ -17,39 +17,39 @@ import uz.texnopos.nasya.utils.onClick
 import uz.texnopos.nasya.utils.textToString
 import uz.texnopos.nasya.utils.toast
 
-@AndroidEntryPoint
+//@AndroidEntryPoint
 class LoginFragment : Fragment(R.layout.fragment_login) {
 
-    private val binding by viewBinding(FragmentLoginBinding::bind)
-    private lateinit var navController: NavController
-    private val viewModel by viewModels<LoginViewModel>()
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        navController = Navigation.findNavController(view)
-        setupEvents()
-        binding.apply {
-            btnLogin.onClick {
-                val email = etLogin.textToString()
-                val password = etPassword.textToString()
-                viewModel.register(email, password)
-            }
-        }
-    }
-
-    private fun setupEvents() {
-        lifecycleScope.launch {
-            viewModel.event.collectLatest { event ->
-                when (event) {
-                    is LoginViewModel.RegisterEvent.Empty -> {
-                        toast(event.message)
-                    }
-                    LoginViewModel.RegisterEvent.Success -> {
-                        toast(R.string.successful_registered)
-                        navController.navigate(R.id.action_loginFragment_to_mainFragment)
-                    }
-                }
-            }
-        }
-
-    }
+//    private val binding by viewBinding(FragmentLoginBinding::bind)
+//    private lateinit var navController: NavController
+//    private val viewModel by viewModels<LoginViewModel>()
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//        navController = Navigation.findNavController(view)
+//        setupEvents()
+//        binding.apply {
+//            btnLogin.onClick {
+//                val email = etLogin.textToString()
+//                val password = etPassword.textToString()
+//                viewModel.register(email, password)
+//            }
+//        }
+//    }
+//
+//    private fun setupEvents() {
+//        lifecycleScope.launch {
+//            viewModel.event.collectLatest { event ->
+//                when (event) {
+//                    is LoginViewModel.RegisterEvent.Empty -> {
+//                        toast(event.message)
+//                    }
+//                    LoginViewModel.RegisterEvent.Success -> {
+//                        toast(R.string.successful_registered)
+//                        navController.navigate(R.id.action_loginFragment_to_mainFragment)
+//                    }
+//                }
+//            }
+//        }
+//
+//    }
 }
