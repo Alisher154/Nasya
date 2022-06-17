@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     @Inject
     lateinit var navigatorHolder: NavigatorHolder
 
-
     private val navigator: Navigator = object : AppNavigator(this, R.id.main_container) {
 
         override fun applyCommands(commands: Array<out Command>) {
