@@ -24,18 +24,6 @@ include ':feature:auth:datasource-impl'
 include ':feature:auth:model'
 include ':feature:auth:usecase'
 
-include ':feature:clients'
-include ':feature:clients:datasource-api'
-include ':feature:clients:datasource-impl'
-include ':feature:clients:model'
-include ':feature:clients:usecase'
-
-
-
-include ':feature:home'
-
 
 include ':ui:auth'
-include ':ui:home'
-include ':ui:clients'
 

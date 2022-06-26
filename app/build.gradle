@@ -39,9 +39,7 @@ android {
 }
 
 dependencies {
-
-//    implementation(project(':ui:home'))
-    implementation(project(':ui:auth'))
+    implementation project(':ui:auth')
 
     implementation 'com.github.terrakok:cicerone:7.1'
 

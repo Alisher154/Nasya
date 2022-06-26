@@ -23,10 +23,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private val navigator: Navigator = object : AppNavigator(this, R.id.main_container) {
 
-        override fun applyCommands(commands: Array<out Command>) {
-            super.applyCommands(commands)
-        }
-
         override fun setupFragmentTransaction(
             screen: FragmentScreen,
             fragmentTransaction: FragmentTransaction,
