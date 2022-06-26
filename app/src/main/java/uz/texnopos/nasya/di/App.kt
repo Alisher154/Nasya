@@ -1,12 +1,12 @@
 package uz.texnopos.nasya.di
 
-import android.app.Application
+import androidx.multidex.MultiDexApplication
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 import uz.texnopos.nasya.BuildConfig
 
 @HiltAndroidApp
-class App:Application() {
+class App : MultiDexApplication() {
     override fun onCreate() {
         super.onCreate()
         if (BuildConfig.DEBUG)

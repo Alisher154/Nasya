@@ -5,8 +5,6 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.uznewmax.auth.ui.databinding.FragmentLoginBinding
 import com.uznewmax.core.utils.onClick
@@ -42,7 +40,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                     }
                     LoginViewModel.RegisterEvent.Success -> {
                         toast(R.string.successful_registered)
-//                        navController.navigate(R.id.action_loginFragment_to_mainFragment)
                     }
                 }
             }

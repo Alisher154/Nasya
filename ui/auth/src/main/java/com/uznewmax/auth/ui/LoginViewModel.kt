@@ -3,13 +3,13 @@ package com.uznewmax.auth.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.uznewmax.auth.usecase.validation.ValidateMail
+import com.uznewmax.auth.usecase.validation.ValidatePassword
+import com.uznewmax.auth.usecase.validation.ValidationResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
-import com.uznewmax.auth.usecase.validation.ValidatePassword
-import com.uznewmax.auth.usecase.validation.ValidationResult
 import javax.inject.Inject
 
 /**
@@ -17,10 +17,11 @@ import javax.inject.Inject
  */
 
 @HiltViewModel
-class LoginViewModel @Inject constructor(
+internal class LoginViewModel @Inject constructor(
     private val validateMail: ValidateMail,
     private val validatePassword: ValidatePassword,
-) : ViewModel() {
+    private val router: AuthContract.Router
+) : ViewModel(), AuthContract.ViewModel {
 
 
     private val _event = Channel<RegisterEvent>()
@@ -57,7 +58,10 @@ class LoginViewModel @Inject constructor(
         safelyValidate {
             onValidateMail(email)
             onValidatePassword(password)
-            viewModelScope.launch { _event.send(RegisterEvent.Success) }
+            viewModelScope.launch {
+                _event.send(RegisterEvent.Success)
+                router.navigateToHome()
+            }
         }
     }
 
@@ -68,5 +72,9 @@ class LoginViewModel @Inject constructor(
     }
 
     class ValidationException : RuntimeException()
+
+    override fun onBackPressed() {
+        viewModelScope.launch { router.finish() }
+    }
 
 }

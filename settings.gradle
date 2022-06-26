@@ -26,4 +26,5 @@ include ':feature:auth:usecase'
 
 
 include ':ui:auth'
-
+include ':ui:home'
+include ':ui:navigation_stub'
